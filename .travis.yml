@@ -1,0 +1,17 @@
+language: ruby
+rvm:
+  - "1.9.2"
+before_script:
+  - rvm install ruby-1.9.2-p290
+  - rvm use 1.9.2-p290
+  - cp ./config/database.hudson.yml ./config/database.yml
+  - cp ./config/site_settings.hudson.yml ./config/site_settings.yml
+  - mysql -e 'create database juggernaut_test;'
+  - bundle install
+  - rake db:schema:load
+branches:
+  only:
+    - master
+  
+# uncomment this line if your project needs to run something other than `rake`:
+# script: bundle exec rspec spec
