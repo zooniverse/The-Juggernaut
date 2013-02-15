@@ -1,0 +1,2 @@
+$('#recent_users').html('<%= escape_javascript render :partial => "zooniverse_user", :collection => @users %>');
+$('#paginator').html('<%= escape_javascript(paginate(@users, :remote => true).to_s) %>');

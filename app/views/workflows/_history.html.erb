@@ -1,0 +1,7 @@
+<%- if @workflow_task.has_ancestors? -%>	
+<p><%= t 'workflows.views.history.heading' %></p>
+
+	<%- @workflow_task.ancestors.reverse.each_with_index do |task, index| -%>
+		<%= link_to "#{t 'workflows.views.history.rewind_link'}", {:controller => "workflows", :action => "rewind", :id => task.id}, {:remote => true, :title => "#{ task.name }"} %> <%- unless index == @workflow_task.ancestors.size-1 -%>&middot;<%- end -%>		
+	<%- end -%>
+<%- end -%>

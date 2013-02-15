@@ -1,0 +1,47 @@
+common:
+  application_name: "Juggernaut"
+  
+test:
+  api_url: "https://api:password@127.0.0.1:3000/api"
+  s3_subjects_bucket: "juggernaut-development"
+  s3_result_bucket: "juggernaut-development-results"
+  s3_access_key_id: ""
+  s3_secret_access_key: ""
+  sqs_queue: "juggernaut_queue"
+  location: "127.0.0.1:3000"
+  scoring: false
+  count_threshold: 10
+  subject_timeframe: 2.days.ago
+  subject_classification_count_limit: 10
+  api_username: api
+  api_password: password
+    
+development:
+  api_url: "https://api:password@127.0.0.1:3000/api"
+  s3_subjects_bucket: "juggernaut-development"
+  s3_result_bucket: "juggernaut-development-results"
+  s3_access_key_id: ""
+  s3_secret_access_key: ""
+  sqs_queue: "juggernaut_queue"
+  location: "127.0.0.1:3000"
+  scoring: false
+  count_threshold: 10
+  subject_timeframe: 2.days.ago
+  subject_classification_count_limit: 2
+  api_username: api
+  api_password: password
+  
+production:    
+  api_url: "https://api:password@127.0.0.1:3000/api"
+  s3_subjects_bucket: "juggernaut-development"
+  s3_result_bucket: "juggernaut-development-results"
+  s3_access_key_id: ""
+  s3_secret_access_key: ""
+  sqs_queue: "juggernaut_queue"
+  location: "127.0.0.1:3000"
+  scoring: false
+  count_threshold: 10
+  subject_timeframe: 2.days.ago  
+  subject_classification_count_limit: 10
+  api_username: api
+  api_password: password

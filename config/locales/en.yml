@@ -1,0 +1,12 @@
+en:
+  workflows:
+    views:
+      add_favourite: Add to my favourites
+      remove_favourite: Remove from my favourites
+      favourited: Favourited
+      history:
+        heading: History
+        rewind_link: Rewind
+    controllers:
+      not_logged_in: You aren't logged in so we can't record your results!
+      problem: There was a problem recording your classification

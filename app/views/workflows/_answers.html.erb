@@ -1,0 +1,5 @@
+<ul>
+<%- @workflow_task.answers.each do |a| -%>
+	<li><%= link_to a.value, {:controller => "workflows", :action => "next_task_or_end", :id => a.id}, {:remote => true}  %></li>
+<%- end -%>
+</ul>

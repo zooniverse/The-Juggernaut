@@ -1,0 +1,4 @@
+<%- subject_ids = session[:current_subject_ids] %>
+<%- unless current_zooniverse_user.favourite_ids & subject_ids == subject_ids %>
+  <%= link_to t('workflows.views.add_favourite'), add_favourite_path, { :remote => true, :onclick => "$(this).parent().html('<p>#{ t('workflows.views.favourited') }</p>')" } %>
+<% end -%>

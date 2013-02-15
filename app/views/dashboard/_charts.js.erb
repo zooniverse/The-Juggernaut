@@ -1,0 +1,38 @@
+<script type='text/javascript' src='http://www.google.com/jsapi'></script>
+
+<script type='text/javascript'>
+  google.load('visualization', '1', {'packages':['annotatedtimeline']});
+	google.load('visualization', '1', {packages:['gauge']});
+	google.setOnLoadCallback(drawTotalUsersChart);
+
+	function drawTotalUsersChart(){
+		var data =  new google.visualization.DataTable();
+		data.addColumn('date', 'Date');
+		data.addColumn('number', 'Users');
+		data.addRows([
+			<%- @total_users.each_pair do |date, c|  -%>
+				[new Date(<%= date.year %>, <%= date.month %>,<%= date.day %>),<%= c %>],
+			<%- end -%>
+		]); 
+
+		var chart = new google.visualization.AnnotatedTimeLine(document.getElementById('total_users_chart'));
+		chart.draw(data, {displayAnnotations: false});			
+	}
+	
+	google.setOnLoadCallback(drawClassificationsChart);
+
+	function drawClassificationsChart(){
+		var data =  new google.visualization.DataTable();
+		data.addColumn('date', 'Date');
+		data.addColumn('number', 'Classifications');
+		data.addRows([
+			<%- @classifications.each_pair do |d,c|  -%>
+				<%date=Date.parse(d)%>
+				[new Date(<%= date.year %>, <%= date.month %>,<%= date.day %>),<%= c %> ],
+			<%- end -%>
+		]); 
+
+		var chart = new google.visualization.AnnotatedTimeLine(document.getElementById('total_classifications_chart'));
+		chart.draw(data, {displayAnnotations: true});			
+	}
+</script>

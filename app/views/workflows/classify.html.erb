@@ -1,0 +1,33 @@
+<div id="page">
+  <div id="header">
+    <h1><%= @workflow.name %></h1>
+  </div>
+  
+  <%= render :partial => 'shared/flash', :locals => { :flash => flash } %>
+  
+  <div id="classify_subject">
+    <%- session[:current_subject_locations].each do |location| %>
+      <%= image_tag location %>
+    <% end -%>
+  </div>
+  
+  <div id="question_container">
+    <div id="question">
+      <%= render :partial => 'question' %>
+    </div>
+    
+    <div id="answers">
+      <%= render :partial => 'answers' %>
+    </div>
+    
+    <div id="history">
+      <%= render :partial => 'history' %>
+    </div>
+    
+    <%- if current_zooniverse_user %>
+      <div id="favourite">
+        <%= render :partial => 'favourite' %>
+      </div>
+    <% end -%>
+  </div>
+</div>

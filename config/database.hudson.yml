@@ -1,0 +1,11 @@
+development:
+  adapter: mysql2
+  database: juggernaut_test
+  username: root
+  password:
+
+test:
+  adapter: mysql2
+  database: juggernaut_test
+  username: root
+  password:

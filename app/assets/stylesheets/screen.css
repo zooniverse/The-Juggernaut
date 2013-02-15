@@ -1,0 +1,24 @@
+@import url(reset.css);
+@import url(fonts.css);
+
+body { 
+	background:#fff; 
+	padding:none; 
+	margin:0; 	
+	font-family:"Lucida Grande", Lucida, Helvetica, sans-serif; 
+	font-size:0.8em; 
+	color:#292929; 
+}
+
+strong { 
+	font-weight:bold; 
+}
+
+em{
+	font-style:italic;
+}
+
+#tasks{
+	width:300px;
+	text-align:center;
+}

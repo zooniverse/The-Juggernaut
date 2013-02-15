@@ -1,0 +1,7 @@
+<% if @workflow_task %>
+	$('#question').html('<%= escape_javascript render :partial => "question" %>');
+	$('#answers').html('<%= escape_javascript render :partial => "answers" %>');
+	$('#history').html('<%= escape_javascript render :partial => "history" %>');
+<% else %>
+	location = '/classify';
+<% end %>

@@ -1,0 +1,15 @@
+<div id="page">
+	<div id="header">
+		<h1><%= SiteConfig.application_name %></h1>
+	</div>
+	
+	<%= render :partial => "shared/flash", :locals => { :flash => flash } %>
+
+	<div class="welcome">
+	<%- if zooniverse_user -%>
+		<p>Hi <%= zooniverse_user %>. Would you like to <%= link_to "classify some images?", :controller => "workflows", :action => "classify" %> &middot; See your <%= link_to "profile", :controller => "home", :action => "profile" %>? &middot; Or <%= link_to("Logout", logout_path) %><br /></p>
+	<%- else -%>
+		<p>You need to <%= link_to "log in", cas_login %> &middot; Would you like to <%= link_to "classify some images?", :controller => "workflows", :action => "classify" %></p>
+	<%- end -%>
+	</div>
+</div>

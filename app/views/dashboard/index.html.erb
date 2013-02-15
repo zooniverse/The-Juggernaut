@@ -1,0 +1,28 @@
+<div id="page">
+	<div id="header">
+		<h1><%= SiteConfig.application_name %>: Dashboard</h1>
+	</div>
+	
+	<div class="stats_panel">
+		<div id="total_users_chart" class="half_chart"></div>
+		<h2>Total Visiting Users</h2>
+	</div>
+	
+	<div class="stats_panel">
+		<div id="total_classifications_chart" class="half_chart"></div>
+		<h2>Total Classifications</h2>
+	</div>
+	
+	<div class="stats_panel pad">
+		<ul id="recent_users">
+			<%= render :partial => "zooniverse_user", :collection => @users %>
+		</ul>		
+		<div id="paginator">
+			<%= paginate @users, :remote => true %>
+		</div>
+		<h2>Recent Users</h2>
+	</div>
+	
+	
+	<%= render :partial => 'charts.js' %>
+</div>
