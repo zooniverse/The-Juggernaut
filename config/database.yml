@@ -1,0 +1,13 @@
+development:
+  adapter: mysql2
+  host: localhost
+  username: root
+  password: 
+  database: the_juggernaut_development
+
+test:
+  adapter: mysql2
+  host: localhost
+  username: root
+  password: 
+  database: the_juggernaut_test
