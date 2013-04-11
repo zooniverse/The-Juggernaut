@@ -9,6 +9,8 @@ To run this application we recommend MySQL and Ruby > 1.8.6 (1.8.7, 1.9.2-p290).
 
 ## RVM & Rubygems
 
+You'll need to have RVM installed from here on out. If you don't have it you can find install instructions [here](https://rvm.io/).
+
 If you don't already have it then go ahead and grab Ruby 1.9.2:
 
 ```bash
