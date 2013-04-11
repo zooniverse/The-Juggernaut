@@ -29,5 +29,17 @@ Next you need to grab the gems for the application. Assuming you're in The-Jugge
 bundle
 ```
 
+## Configuring the database
+
+Next we need to set up the database for the application. The configuration is in config/database.yml  and by default is set up as follows:
+
+```yaml
+development:
+  adapter: mysql2
+  host: localhost
+  username: root
+  password: 
+  database: the_juggernaut_development
+```
 
 
