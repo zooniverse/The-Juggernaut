@@ -69,3 +69,19 @@ rake workflow:execute[hubble]
 
 ## Stubbing out some Subjects
 
+By default there are 4 images included with the application to help test out the Hubble Workflow. There's also a rake task you can run that should import these.
+
+```ruby
+rake load_test_subjects
+```
+
+Note that this task assumes that the id (in the database) for the Hubble workflow is '1'. If this is not the case then you'll need to edit this task to get the application working.
+
+
+## You're done!
+
+That's about it. At this point you should have a working application saving classifications and annotations to the database and the option to favourite items during classification.
+
+```ruby
+rails server
+```
