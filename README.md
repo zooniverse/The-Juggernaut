@@ -59,3 +59,13 @@ rails server
 
 Checking in on [http://0.0.0.0:3000](http://0.0.0.0:3000) you should see a page render with the message 'You need to log in · Would you like to classify some images?'
 
+## Setting up a workflow
+
+By default there are no images ([Subjects](https://github.com/zooniverse/The-Juggernaut/blob/master/app/models/subject.rb)) available to be classified. To test out the functionality you need to bootstrap the application with a test workflow based on the Galaxy Zoo Hubble decision tree. You can instantiate that as follows:
+
+```ruby
+rake workflow:execute[hubble]
+```
+
+## Stubbing out some Subjects
+
