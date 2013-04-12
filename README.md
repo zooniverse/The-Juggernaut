@@ -42,4 +42,20 @@ development:
   database: the_juggernaut_development
 ```
 
+Modify these settings for your particular setup (username/password) and when you're ready to create your databases and set up the database structure run the following:
+
+```ruby
+rake db:create
+rake db:schema:load
+```
+
+## Booting the application
+
+Provided all of the previous steps have run without error you should now be able to boot the application screen by executing the standard Rails boot:
+
+```ruby
+rails server
+```
+
+Checking in on [http://0.0.0.0:3000](http://0.0.0.0:3000) you should see a page render with the message 'You need to log in · Would you like to classify some images?'
 
