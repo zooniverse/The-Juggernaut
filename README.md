@@ -5,7 +5,7 @@ Juggernaut
 
 # Getting Started
 
-To run this application we recommend MySQL and Ruby > 1.8.6 (1.8.7, 1.9.2-p290). Please note the application has not been tested against versions of Ruby later than 1.9.2-p290. This guide assumes that you have RVM installed to manage your Rubies.
+To run this application we recommend MySQL and Ruby > 1.8.6 (1.8.7, 1.9.2-p290). Please note the application has not been tested against versions of Ruby later than 1.9.2-p290. This guide assumes that you have RVM installed to manage your Rubies. You'll also need a JavaScript runtime.
 
 ## RVM & Rubygems
 
@@ -31,7 +31,7 @@ bundle
 
 ## Configuring the database
 
-Next we need to set up the database for the application. The configuration is in config/database.yml  and by default is set up as follows:
+Next we need to set up the database for the application. The configuration is in config/database.yml and by default is set up as follows:
 
 ```yaml
 development:
@@ -40,6 +40,13 @@ development:
   username: root
   password: 
   database: the_juggernaut_development
+
+test:
+  adapter: mysql2
+  host: localhost
+  username: root
+  password: 
+  database: the_juggernaut_test
 ```
 
 Modify these settings for your particular setup (username/password) and when you're ready to create your databases and set up the database structure run the following:
