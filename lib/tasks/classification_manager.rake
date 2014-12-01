@@ -7,14 +7,11 @@ namespace :classifications do
     puts
     puts "Clearing classifications and favourites..."
 
-    Classification.all.each do |cl|
-      cl.destroy
-    end
+    Classification.destroy_all
 
-    Favourite.all.each do |fv|
-      fv.destroy
-    end
+    Favourite.destroy_all
 
+    puts
     puts "...done."
     puts
 
